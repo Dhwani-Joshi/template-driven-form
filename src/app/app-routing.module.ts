@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { BasicFormComponent } from './basicForm/basicForm.component';
 
-const routes: Routes = [];
+
+
+const routes: Routes = [ { path: 'basicform',  component: BasicFormComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  static components = [
+    BasicFormComponent
+  ];
+ }
